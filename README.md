@@ -66,3 +66,7 @@ El resultado del Query debe arrojar "Thomas Jefferson"
 
 ## Manos a la obra
 
+<img width="211" alt="ascensorTabla2" src="https://user-images.githubusercontent.com/17502722/155905044-f3269916-fd47-424c-bee3-b72870e47ac4.png">
+
+<img width="73" alt="ascensorTabla3" src="https://user-images.githubusercontent.com/17502722/155905086-4c4a4147-5e55-4894-8591-f61535956fcd.png">
+

@@ -50,3 +50,19 @@ Da el mismo resultado
 
 ![tablaSueldos7](https://user-images.githubusercontent.com/17502722/155869284-14da0a6f-327f-4e42-b28f-dcc6cc5d84d6.png)
 
+# Test 1
+
+Se trata de la tabla line que almacena el turno de un grupo de personas para subirse al ascensor, la capacidad de este es de max 1000 libras de peso, la tarea de es crear una  consulta que muestre el nombre de la ultima persona en subirse en el primer viaje
+
+El script de creacion de la tabla es:
+
+<img width="265" alt="ascensorTabla" src="https://user-images.githubusercontent.com/17502722/155904473-95a14ab3-fff0-4a9a-863e-1a63c51b5ac4.png">
+
+la tabla es:
+
+<img width="313" alt="ascensorTabla1" src="https://user-images.githubusercontent.com/17502722/155904561-4014ed38-e23c-4acc-ac18-6bd7f5307ca6.png">
+
+El resultado del Query debe arrojar "Thomas Jefferson"
+
+## Manos a la obra
+

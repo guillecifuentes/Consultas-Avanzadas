@@ -70,3 +70,14 @@ El resultado del Query debe arrojar "Thomas Jefferson"
 
 <img width="73" alt="ascensorTabla3" src="https://user-images.githubusercontent.com/17502722/155905086-4c4a4147-5e55-4894-8591-f61535956fcd.png">
 
+# Test 2
+## Contar los tickets por obra en orden descendente
+
+La primera tabla representa las obras, la segunda las reservaciones y la tercera el Query a realizar
+
+<img width="900" alt="test2Tablas" src="https://user-images.githubusercontent.com/17502722/155905567-02400e76-9fd3-458a-a5f3-a7e71e8aca6b.png">
+
+La consulta solicitada es:
+
+<img width="293" alt="test2Query" src="https://user-images.githubusercontent.com/17502722/155905607-856a5437-c49e-451b-bb19-dcffbe1871e2.png">
+

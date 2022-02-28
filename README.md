@@ -50,3 +50,54 @@ Da el mismo resultado
 
 ![tablaSueldos7](https://user-images.githubusercontent.com/17502722/155869284-14da0a6f-327f-4e42-b28f-dcc6cc5d84d6.png)
 
+# Test 1
+
+Se trata de la tabla line que almacena el turno de un grupo de personas para subirse al ascensor, la capacidad de este es de max 1000 libras de peso, la tarea de es crear una  consulta que muestre el nombre de la ultima persona en subirse en el primer viaje
+
+El script de creacion de la tabla es:
+
+<img width="265" alt="ascensorTabla" src="https://user-images.githubusercontent.com/17502722/155904473-95a14ab3-fff0-4a9a-863e-1a63c51b5ac4.png">
+
+la tabla es:
+
+<img width="313" alt="ascensorTabla1" src="https://user-images.githubusercontent.com/17502722/155904561-4014ed38-e23c-4acc-ac18-6bd7f5307ca6.png">
+
+El resultado del Query debe arrojar "Thomas Jefferson"
+
+## Manos a la obra
+
+<img width="211" alt="ascensorTabla2" src="https://user-images.githubusercontent.com/17502722/155905044-f3269916-fd47-424c-bee3-b72870e47ac4.png">
+
+<img width="73" alt="ascensorTabla3" src="https://user-images.githubusercontent.com/17502722/155905086-4c4a4147-5e55-4894-8591-f61535956fcd.png">
+
+# Test 2
+## Contar los tickets por obra en orden descendente
+
+La primera tabla representa las obras, la segunda las reservaciones y la tercera el Query a realizar
+
+<img width="900" alt="test2Tablas" src="https://user-images.githubusercontent.com/17502722/155905567-02400e76-9fd3-458a-a5f3-a7e71e8aca6b.png">
+
+La consulta solicitada es:
+
+<img width="293" alt="test2Query" src="https://user-images.githubusercontent.com/17502722/155905607-856a5437-c49e-451b-bb19-dcffbe1871e2.png">
+
+El Resultado de esa consulta es:
+<img width="324" alt="test2Resultado" src="https://user-images.githubusercontent.com/17502722/155905865-cf33e758-f676-4f00-85a4-dd7f4b2ff519.png">
+
+Observe que el ultimo valor muestra null deberia mostrar 0
+
+La nueva consulta seria:
+
+<img width="286" alt="test2QueryOptimizada" src="https://user-images.githubusercontent.com/17502722/155905925-9948d20a-1f3c-47c8-8916-d1ae487a1db6.png">
+
+Su resultado es:
+
+<img width="238" alt="test2Resultado2" src="https://user-images.githubusercontent.com/17502722/155905937-f98f16ca-91aa-4c40-8bf1-a2e0341542f4.png">
+
+# Test 3
+
+<img width="375" alt="test3" src="https://user-images.githubusercontent.com/17502722/155908782-a8e15737-19c6-4d10-8aaa-6c3ae287fdcb.png">
+
+<img width="242" alt="test3resultado" src="https://user-images.githubusercontent.com/17502722/155908857-d0c7c7fe-da0d-49a4-a0cc-bb1d2f07c330.png">
+
+

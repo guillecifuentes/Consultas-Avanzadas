@@ -94,6 +94,10 @@ Su resultado es:
 
 <img width="238" alt="test2Resultado2" src="https://user-images.githubusercontent.com/17502722/155905937-f98f16ca-91aa-4c40-8bf1-a2e0341542f4.png">
 
+# Test 3
 
+<img width="375" alt="test3" src="https://user-images.githubusercontent.com/17502722/155908782-a8e15737-19c6-4d10-8aaa-6c3ae287fdcb.png">
+
+<img width="242" alt="test3resultado" src="https://user-images.githubusercontent.com/17502722/155908857-d0c7c7fe-da0d-49a4-a0cc-bb1d2f07c330.png">
 
 

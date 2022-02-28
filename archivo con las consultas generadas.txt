@@ -1,0 +1,140 @@
+Querys Usadas y Resultados 
+----------------------------------------------------------------------
+
+Tabla de sueldos
+-Queremos el 2do sueldo más alto de cada equipo.
+
+
+
+CREATE TABLE salaries (
+ ID int not null ,
+ Name varchar(40) not null,
+ AnnualSalary int not null,
+ ManagerId int
+)
+
+INSERT INTO salaries (
+ID, Name, AnnualSalary, ManagerId
+) VALUES 
+(1, 'Lisa Smith', 150000 , NULL),
+(2, 'Dan Bradley', 110000 , 1 ),
+(3, 'Oliver Queen', 180000 , 1 ),
+(4, 'Dave Dakota', 100000 , 1 ),
+(5, 'Steve Carr', 200000 , NULL),
+(6, 'Alice Johnson', 205000 , 5),
+(7, 'Damian Luther', 100000 , 5),
+(8, 'Avery Montgomery', 210000 , 5),
+(9, 'Mark Spencer', 140000 , 5),
+(10, 'Melanie Thorthon', 200000 , NULL),
+(11, 'Dana Parker', 100000 , 10),
+(12, 'Antonio Maker', 120000 , 10 ),
+(13, 'Lucille Alvarez', 140000 , 10 );
+
+
+
+with rankeds as (
+	select name, AnnualSalary,
+	if(ManagerId is null , id ,ManagerId ) as team,
+	rank () over (partition by team order by AnnualSalary desc) as ranked
+	from salaries s 
+)
+
+select name, AnnualSalary 
+from rankeds
+where ranked = 2
+
+
+----------------------------------------------------------------------
+
+
+insert into line values (5, 'George Washington', 250, 1);
+insert into line values (4, 'Thomas Jefferson', 175, 5);
+insert into line values (3, 'John Adams', 350, 2);
+insert into line values (6, 'Thomas Jefferson', 400, 3);
+insert into line values (1, 'James Elephant', 500, 6);
+insert into line values (2, 'Will Johnliams', 200, 4);
+
+-- write your code in PostgreSQL 9.4
+
+WITH cumulative_w as (
+SELECT 
+name,SUM(weight) OVER(ORDER BY turn) AS cumulativeSum
+FROM line 
+ORDER BY turn
+)
+
+SELECT name
+FROM cumulative_w
+WHERE cumulativeSum <= 1000
+ORDER BY cumulativeSum DESC 
+LIMIT 1
+----------------------------------------------------------------------
+
+insert into plays values (109, 'Queens and Kings of Madagascar', 'Paul Sat'),
+(123, 'Merlin', 'Lee Roy'),
+(142, 'Key of the tea', 'Max Rogers'),
+(144, 'ROMEance Comedy', 'Bohring Ashell'),
+(145, 'Nameless.', 'Note Nul');
+
+insert into reservations values (13, 109, 12, 'Mc Rayleigh Theater'),
+(24, 109, 34, 'Mc Rayleigh Theater'),
+(37, 145, 84, 'Mc Rayleigh Theater'),
+(49, 145, 45, 'Mc Rayleigh Theater'),
+(51, 145, 41, 'Mc Rayleigh Theater'),
+(68, 123, 3, 'Mc Rayleigh Theater'),
+(83, 142, 46, 'Mc Rayleigh Theater');
+
+
+SELECT p.id as id,
+ p.title as title,
+ COALESCE(SUM(r.number_of_tickets),0) as reserved_tickets
+FROM plays as p 
+LEFT JOIN reservations as r
+ON p.id = r.play_id
+GROUP BY p.id, p.title
+ORDER BY reserved_tickets DESC, id ASC 
+
+----------------------------------------------------------------------
+
+insert into recipes values (1, 'Scrambled eggs')
+(2, 'Fondue'),
+(3, 'Sandwich'),
+(4, 'Tomato soup'),
+(6, 'Liver'),
+(8, 'Fried duck'),
+(12, 'Boiled duck'),
+(18, 'Baked duck');
+
+select 
+max(left_title) as left_title,
+max(right_title) as right_title 
+from (
+	select *
+	, if (page_no % 2 = 0, title, null) as left_title
+	, if (page_no % 2 <> 0, title, null) as right_title
+	, if (page_no % 2 = 0, (page_no * 2) -1, page_no) as custom_order
+	from recipes 
+	order by custom_order 
+) as q 
+group by custom_order 
+
+
+WITH RECURSIVE maxid AS (
+    SELECT MAX(page_no) AS page_no FROM recipes)
+, cte AS (
+	SELECT 0 AS rid
+	UNION ALL
+	SELECT rid + 1 
+	FROM cte
+	CROSS JOIN maxid
+	WHERE (rid + 1) * 2 <= maxid.page_no)
+SELECT MAX(CASE WHEN r.page_no % 2 = 0 THEN title END) AS left_title,
+       MAX(CASE WHEN r.page_no % 2 = 1 THEN title END) AS right_title
+FROM cte
+JOIN recipes r 
+ON floor(r.page_no / 2) = cte.rid
+GROUP BY rid
+ORDER BY rid
+
+
+

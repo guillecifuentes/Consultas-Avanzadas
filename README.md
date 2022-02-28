@@ -81,3 +81,19 @@ La consulta solicitada es:
 
 <img width="293" alt="test2Query" src="https://user-images.githubusercontent.com/17502722/155905607-856a5437-c49e-451b-bb19-dcffbe1871e2.png">
 
+El Resultado de esa consulta es:
+<img width="324" alt="test2Resultado" src="https://user-images.githubusercontent.com/17502722/155905865-cf33e758-f676-4f00-85a4-dd7f4b2ff519.png">
+
+Observe que el ultimo valor muestra null deberia mostrar 0
+
+La nueva consulta seria:
+
+<img width="286" alt="test2QueryOptimizada" src="https://user-images.githubusercontent.com/17502722/155905925-9948d20a-1f3c-47c8-8916-d1ae487a1db6.png">
+
+Su resultado es:
+
+<img width="238" alt="test2Resultado2" src="https://user-images.githubusercontent.com/17502722/155905937-f98f16ca-91aa-4c40-8bf1-a2e0341542f4.png">
+
+
+
+
